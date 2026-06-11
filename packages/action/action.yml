@@ -1,0 +1,35 @@
+name: 'VibeSafe'
+description: 'Security scanner for vibe-coded and AI-generated apps'
+branding:
+  icon: 'shield'
+  color: 'red'
+
+inputs:
+  fail-on:
+    description: 'Minimum severity to fail the action (none/low/medium/high/critical)'
+    required: false
+    default: 'high'
+  post-comment:
+    description: 'Post scan results as a PR comment'
+    required: false
+    default: 'true'
+  token:
+    description: 'GitHub token for posting comments'
+    required: false
+    default: ${{ github.token }}
+  path:
+    description: 'Path to scan (default: repo root)'
+    required: false
+    default: '.'
+
+outputs:
+  score:
+    description: 'Safety score (0-100)'
+  findings-count:
+    description: 'Total number of findings'
+  critical-count:
+    description: 'Number of critical findings'
+
+runs:
+  using: 'node20'
+  main: 'dist/index.js'

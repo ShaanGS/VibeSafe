@@ -1,0 +1,9 @@
+# VibeSafe — XSS Pattern Rules for AI-Generated Code
+# TODO: full semgrep rule — for now, the built-in regex fallback handles this pattern
+rules:
+  - id: vs-ai-xss-innerhtml
+    message: >
+      Dangerous innerHTML assignment. Use textContent or sanitise with DOMPurify.
+    severity: WARNING
+    languages: [javascript, typescript]
+    pattern: "TODO: implement semgrep pattern"

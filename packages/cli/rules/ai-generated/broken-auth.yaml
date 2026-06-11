@@ -1,0 +1,9 @@
+# VibeSafe — Broken Auth Rules for AI-Generated Code
+# TODO: full semgrep rule — for now, the built-in regex fallback handles this pattern
+rules:
+  - id: vs-ai-broken-auth-no-middleware
+    message: >
+      Express route handler without authentication middleware.
+    severity: WARNING
+    languages: [javascript, typescript]
+    pattern: "TODO: implement semgrep pattern"

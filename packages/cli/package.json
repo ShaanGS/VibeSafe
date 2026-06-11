@@ -1,0 +1,61 @@
+{
+  "name": "vibesafe",
+  "version": "0.1.0",
+  "description": "Security scanner for vibe-coded and AI-generated apps",
+  "license": "MIT",
+  "author": "Shaan Gurushankar",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ShaanGS/VibeSafe.git",
+    "directory": "packages/cli"
+  },
+  "homepage": "https://github.com/ShaanGS/VibeSafe#readme",
+  "bugs": {
+    "url": "https://github.com/ShaanGS/VibeSafe/issues"
+  },
+  "keywords": [
+    "security",
+    "scanner",
+    "sast",
+    "secrets",
+    "vulnerabilities",
+    "cli",
+    "devsecops",
+    "vibe-coding",
+    "ai-generated",
+    "code-security",
+    "semgrep",
+    "npm-audit"
+  ],
+  "bin": {
+    "vibesafe": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "rules"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "boxen": "^7.1.1",
+    "chalk": "^4.1.2",
+    "commander": "^12.1.0",
+    "figlet": "^1.8.0",
+    "ora": "^5.4.1"
+  },
+  "devDependencies": {
+    "@types/figlet": "^1.7.0",
+    "@types/node": "^22.10.2",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

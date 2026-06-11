@@ -1,0 +1,9 @@
+# VibeSafe — SQL Injection Rules for AI-Generated Code
+# TODO: full semgrep rule — for now, the built-in regex fallback handles this pattern
+rules:
+  - id: vs-ai-sqli-string-concat
+    message: >
+      SQL query built via string concatenation. Use parameterised queries instead.
+    severity: ERROR
+    languages: [javascript, typescript, python]
+    pattern: "TODO: implement semgrep pattern"

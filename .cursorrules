@@ -1,0 +1,28 @@
+# VibeSafe — Cursor Rules
+
+Read VIBESAFE_PRD.md fully before making any decision.
+
+Tech stack: Node.js 18+, TypeScript strict mode, pnpm workspaces, Turborepo, commander.js, chalk, boxen, ora, vitest, tsup.
+
+## Coding Rules
+
+- Never use `any` type. Always use the types defined in src/types.ts
+- All async functions must handle errors explicitly (no unhandled promise rejections)
+- All terminal output goes through src/output/ — never console.log directly in scanners
+- Comments explain WHY not WHAT
+- Every exported function needs a JSDoc comment
+
+## Build Order
+
+Follow the Cursor Prompting Plan in Section 14 of VIBESAFE_PRD.md. Build in order:
+
+1. Prompt 0 — Project setup (monorepo + CLI scaffold)
+2. Prompt 1 — Project type detection + ignore patterns
+3. Prompt 2 — Secrets scanner
+4. Prompt 3 — Dependency scanner
+5. Prompt 4 — SAST with Semgrep
+6. Prompt 5 — Safety Score + Terminal output
+7. Prompt 6 — LLM fix engine
+8. Prompt 7 — GitHub PR creation
+
+Do not skip ahead. Each prompt builds on the last.

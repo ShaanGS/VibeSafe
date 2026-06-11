@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#161b22"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FF6B35"/>
+      <stop offset="100%" stop-color="#FF8F65"/>
+    </linearGradient>
+    <linearGradient id="shield-fill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF6B35"/>
+      <stop offset="100%" stop-color="#E85D2A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="200" rx="12" fill="url(#bg)"/>
+  <rect width="800" height="200" rx="12" stroke="#30363d" stroke-width="1" fill="none"/>
+
+  <!-- Shield icon -->
+  <g transform="translate(220, 40)">
+    <path d="M30 8 L54 18 V42 C54 62 42 76 30 82 C18 76 6 62 6 42 V18 Z"
+          fill="url(#shield-fill)" opacity="0.9"/>
+    <path d="M24 44 L30 50 L42 34" stroke="white" stroke-width="4" stroke-linecap="round"
+          stroke-linejoin="round" fill="none"/>
+  </g>
+
+  <!-- VibeSafe text -->
+  <text x="290" y="82" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif"
+        font-size="52" font-weight="800" fill="white" letter-spacing="-1">
+    Vibe<tspan fill="url(#accent)">Safe</tspan>
+  </text>
+
+  <!-- Tagline -->
+  <text x="290" y="118" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif"
+        font-size="18" fill="#8b949e" font-weight="400">
+    Security scanner built for the age of vibe coding.
+  </text>
+
+  <!-- Decorative dots -->
+  <circle cx="290" cy="150" r="3" fill="#FF6B35" opacity="0.6"/>
+  <circle cx="302" cy="150" r="3" fill="#FF6B35" opacity="0.4"/>
+  <circle cx="314" cy="150" r="3" fill="#FF6B35" opacity="0.2"/>
+</svg>

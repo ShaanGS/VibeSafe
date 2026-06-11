@@ -1,0 +1,9 @@
+# VibeSafe — Hardcoded Credentials Rules for AI-Generated Code
+# TODO: full semgrep rule — for now, the built-in regex fallback handles this pattern
+rules:
+  - id: vs-ai-hardcoded-jwt-secret
+    message: >
+      JWT signing secret is hardcoded. Move to an environment variable.
+    severity: ERROR
+    languages: [javascript, typescript]
+    pattern: "TODO: implement semgrep pattern"
