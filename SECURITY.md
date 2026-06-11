@@ -14,7 +14,11 @@ If you find a security vulnerability in VibeSafe itself (not in code that VibeSa
 
 ### How to Report
 
-Email **vibesafe-security@protonmail.com** with:
+Please report security vulnerabilities through GitHub's **Private Vulnerability Reporting** feature in the repository settings. 
+
+Alternatively, if you prefer email, contact the maintainers at **security@vibesafe.dev**.
+
+Please include:
 
 1. A description of the vulnerability
 2. Steps to reproduce

@@ -69,6 +69,7 @@ Cursor, Copilot, Bolt, v0, and Lovable are incredible tools. But they generate c
 
 ## Quick Start
 
+### Global / CI Usage
 ```bash
 # Scan any project (no install required)
 npx vibesafe scan .
@@ -79,6 +80,22 @@ vibesafe scan ./my-project
 
 # JSON output for CI pipelines
 vibesafe scan . --json
+```
+
+### Running Locally from Source
+If you are developing VibeSafe or want to run it directly from this source code:
+```bash
+# 1. Install dependencies and build the TypeScript project
+pnpm install
+pnpm build
+
+# 2. Run the CLI directly using Node (relative or absolute path to target project)
+node packages/cli/dist/index.js scan /path/to/your/project
+
+# 3. Or link it globally so you can use the 'vibesafe' command anywhere
+cd packages/cli && npm link
+# Now you can cd into any other directory (e.g., 'kairo') and run:
+vibesafe scan .
 ```
 
 VibeSafe auto-detects your project type and runs the appropriate scanners. No configuration needed.
